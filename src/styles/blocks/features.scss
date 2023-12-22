@@ -1,0 +1,102 @@
+.features {
+  &__container {
+    @extend %container;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-family: $_bebas;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: 70px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px $colorTurquoise;
+
+    &--full {
+      color: $colorTurquoise;
+    }
+
+    @include onTablet {
+      margin-bottom: 50px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__content {
+    @include onTablet {
+      display: flex;
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 70px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include onTablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto 30px;
+    width: calc(100vw - 60px);
+    max-width: 400px;
+
+    @include onTablet {
+      margin: 0 0 30px;
+      width: 100%;
+    }
+
+    @include onDesktop {
+      &--num-1 {
+        &:hover {
+          content: url(../images/gif/features1.gif);
+        }
+      }
+
+      &--num-2 {
+        &:hover {
+          content: url(../images/gif/features2.gif);
+        }
+      }
+
+      &--num-3 {
+        &:hover {
+          content: url(../images/gif/features3.gif);
+        }
+      }
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 20px;
+    font-family: $_bebas;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.15em;
+    text-align: center;
+    text-transform: uppercase;
+    color: $colorTextBlack;
+  }
+
+  &__description {
+    margin: 0 auto;
+    max-width: 500px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: $colorTextGrey;
+  }
+}

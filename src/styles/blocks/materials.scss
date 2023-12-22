@@ -1,0 +1,153 @@
+.materials {
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+    box-sizing: border-box;
+
+    @extend %container;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    font-family: $_bebas;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: 70px;
+    letter-spacing: 0.15em;
+    color: $colorTurquoise;
+    z-index: 1;
+
+    @include onTablet {
+      font-size: 9vw;
+      line-height: 1.2em;
+    }
+
+    @media (min-width: 1440px) {
+      font-size: 138px;
+      line-height: 167px;
+    }
+  }
+
+  &__image-box {
+    margin-top: -80px;
+
+    @include onTablet {
+      margin-top: 0;
+    }
+
+    @include onDesktop {
+      margin-top: -150px;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+
+    @media (min-width: 1440px) {
+      margin-left: -135px;
+      width: 1440px;
+    }
+  }
+
+  &__text {
+    display: none;
+
+    @include onTablet {
+      position: absolute;
+      top: 12vw;
+      right: 34px;
+      display: block;
+      width: 50%;
+      z-index: 1;
+    }
+
+    @include onDesktop {
+      top: 170px;
+      right: 55px;
+      width: 40%;
+    }
+  }
+
+  &__sub-title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: $colorTextGrey;
+  }
+
+  &__description {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $colorTextGrey;
+  }
+
+  &__feature {
+    padding: 28px 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $colorGreyLight;
+  }
+
+  &__side-text {
+    display: none;
+
+    @include onTablet {
+      display: block;
+      position: absolute;
+    }
+
+    @include onDesktop {
+      display: none;
+    }
+
+    &--left {
+      top: 250px;
+      left: 8px;
+    }
+
+    &--right {
+      top: 0;
+      right: 8px;
+    }
+  }
+
+  &__slider {
+    position: absolute;
+    top: -50px;
+    background-color: rgba(0, 0, 0, 0.45);
+    mix-blend-mode: normal;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(17px);
+
+    @include onTablet {
+      position: static;
+    }
+  }
+
+  &__pagination {
+    margin-bottom: 26px;
+  }
+
+  &__slider .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+    border-radius: 0;
+    transform: rotate(45deg);
+    background-color: $colorGreyLight;
+    opacity: 1;
+  }
+
+  &__slider .swiper-pagination-bullet-active {
+    box-sizing: border-box;
+    border: 1px solid $colorGreyLight;
+    background-color: transparent;
+  }
+}

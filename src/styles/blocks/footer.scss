@@ -1,0 +1,122 @@
+.footer {
+  &__container {
+    position: relative;
+
+    @extend %container;
+  }
+
+  &__grid {
+    @include onTablet {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+
+  &__address {
+    display: none;
+
+    @include onTablet {
+      display: block;
+      grid-area: 1 / 1 / 3 / 2;
+    }
+  }
+
+  &__title {
+    display: none;
+    margin-bottom: 5px;
+    padding: 5px 0;
+    font-family: $_bebas;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #000;
+    border-bottom: 1px solid transparent;
+
+    @include onTablet {
+      display: inline-block;
+    }
+
+    @include hover(border-color, $colorTextGrey);
+  }
+
+  &__address-content {
+    display: inline-block;
+    width: 150px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000;
+  }
+
+  &__socials {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: grayscale(1);
+    transition: transform $smoothTime, filter $smoothTime;
+
+    @include onDesktop {
+      width: 32px;
+      height: 30px;
+
+      &:hover {
+        transform: scale(130%);
+        filter: none;
+      }
+    }
+
+    &--twitter {
+      background-image: url(../images/icons/twitter-blue.svg);
+    }
+
+    &--instagram {
+      background-image: url(../images/icons/instagram-color.svg);
+    }
+
+    &--facebook {
+      background-image: url(../images/icons/facebook-blue.svg);
+    }
+  }
+
+  &__logo {
+    text-align: center;
+
+    @include onTablet {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+
+    @include onDesktop {
+      align-self: end;
+    }
+  }
+
+  &__left-block {
+    grid-area: 1 / 3 / 3 / 4;
+    justify-self: end;
+  }
+
+  &__copyright {
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000;
+
+    @include onTablet {
+      text-align: left;
+    }
+  }
+}

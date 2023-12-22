@@ -1,7 +1,22 @@
-@import "utils";
-@import "fonts";
-@import "typography";
+@import "./utils/fonts";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/extends";
+@import "./utils/reset";
 
-body {
-  background: $c-gray;
-}
+@import "./blocks/page.scss";
+@import "./blocks/header.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/vertical.scss";
+@import "./blocks/button.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/for-whom.scss";
+@import "./blocks/content.scss";
+@import "./blocks/features.scss";
+@import "./blocks/team.scss";
+@import "./blocks/materials.scss";
+@import "./blocks/circle.scss";
+@import "./blocks/potr-size.scss";
+@import "./blocks/benefits.scss";
+@import "./blocks/questions.scss";
+@import "./blocks/footer.scss";
