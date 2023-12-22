@@ -13,10 +13,6 @@
     >
 
     <link rel="stylesheet" href="./styles/main.scss">
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    > -->
   </head>
   <body class="page__body">
     <header class="page__header header">
@@ -45,7 +41,11 @@
           <div>
             <a href="#message" class="header__icon header__icon--cart"></a>
 
-            <a href="#menu" class="header__icon header__icon--menu"></a>
+            <a
+              href="#menu"
+              class="header__icon header__icon--menu"
+              aria-label="open menu"
+            ></a>
           </div>
         </nav>
 
@@ -357,6 +357,13 @@
             <img
               src="./images/materials-bg.webp"
               class="materials__image"
+              srcset="
+                ./images/materials-bg-small.webp 500w,
+                ./images/materials-bg-medium.webp 900w,
+                ./images/materials-bg.webp 1440w"
+              sizes="(max-width: 500px) 500px,
+                    (max-width: 900px) 900px,
+                    1440px"
               alt="POTR Eco materials"
             >
 
@@ -749,6 +756,7 @@
               href="https://twitter.com/"
               class="footer__link footer__link--twitter"
               target="_blank"
+              aria-label="twitter link"
             >
             </a>
 
@@ -756,6 +764,7 @@
               href="https://www.instagram.com/"
               class="footer__link footer__link--instagram"
               target="_blank"
+              aria-label="instagram link"
             >
             </a>
 
@@ -763,6 +772,7 @@
               href="https://facebook.com/"
               class="footer__link footer__link--facebook"
               target="_blank"
+              aria-label="facebook link"
             >
             </a>
           </div>
@@ -782,7 +792,6 @@
       </div>
     </footer>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     <script type="text/javascript" src="scripts/main.js">
     </script>
   </body>
