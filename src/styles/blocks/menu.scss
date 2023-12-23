@@ -1,11 +1,11 @@
 .menu {
   width: 231px;
-  height: 100vh;
   background-color: $colorTurquoise;
+  overflow-y: auto;
   z-index: 1;
 
   &__list {
-    margin: 0;
+    margin-bottom: 30px;
     padding-left: 80px;
     padding-top: 24vh;
   }

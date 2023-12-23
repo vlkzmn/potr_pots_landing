@@ -24,6 +24,8 @@ const swiper = document.querySelector('.materials__slider');
 const wrapper = document.querySelector('.materials__slider-wrapper');
 const box = document.querySelectorAll('.materials__swiper-slide');
 
+const menuContent = document.querySelector('.menu');
+
 function removeSwiperClasses() {
   swiper.classList.remove('swiper');
   swiper.classList.remove('swiper-backface-hidden');
@@ -135,6 +137,8 @@ function checkScreenWidth() {
         child.style.height = maxHeight + 'px';
       });
     }
+
+    menuContent.style.height = document.documentElement.clientHeight + 'px';
   }
 }
 
