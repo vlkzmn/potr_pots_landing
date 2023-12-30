@@ -120,21 +120,20 @@ function checkScreenWidth() {
       mySwiper = initSwiper();
     }
 
-    if (mySwiper) {
-      let maxHeight = 0;
+    let maxHeight = 0;
 
-      styleNormalize();
+    styleNormalize();
 
-      children.forEach(child => {
-        maxHeight = Math.max(maxHeight, child.clientHeight);
-      });
+    children.forEach(child => {
+      maxHeight = Math.max(maxHeight, child.clientHeight);
+      console.log('h', child.clientHeight);
+    });
 
-      maxHeight -= 50;
+    console.log('m', maxHeight);
 
-      children.forEach(child => {
-        child.style.height = maxHeight + 'px';
-      });
-    }
+    children.forEach(child => {
+      child.style.height = maxHeight + 'px';
+    });
   }
 }
 
